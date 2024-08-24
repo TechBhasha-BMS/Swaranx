@@ -1,0 +1,29 @@
+.container {
+  min-width: 14rem;
+  padding: 2rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+@media print {
+  .container {
+    display: none;
+  }
+}
+ul {
+  display: flex;
+  gap: 3rem;
+}
+
+li {
+  list-style: none;
+}
+
+.list {
+  text-decoration: none;
+}
+.logo-brand img {
+  max-width: 100%;      /* Make sure the image does not exceed the container's width */
+  height: auto;         /* Maintain the aspect ratio */
+  max-height: 80px;     /* Set a maximum height to ensure the image fits within a specific size */
+  object-fit: contain;  /* Ensure the image fits within the container without distortion */
+}

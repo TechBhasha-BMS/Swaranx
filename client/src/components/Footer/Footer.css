@@ -1,0 +1,31 @@
+.footer {
+    background-color: #f1f1f1; /* Light background color */
+    padding: 20px; /* Padding for the footer */
+    text-align: center; /* Center the content */
+    /* position: fixed; Fix the footer at the bottom */
+    bottom: 0; /* Position at the bottom */
+    width: 100%; /* Full width */
+    margin-top: 100px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+.footer-text {
+    margin-right: 10px; /* Space between text and image */
+    font-size: 16px; /* Font size for the text */
+    color: #333; /* Text color */
+}
+
+.footer-image {
+    height: 30px; /* Height of the image */
+    width: auto; /* Maintain aspect ratio */
+}
+@media print {
+    .footer{
+        display: none;
+    }
+}

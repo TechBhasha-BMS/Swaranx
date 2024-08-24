@@ -1,0 +1,453 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Urbanist, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    color-scheme: light dark;
+    margin-left: 10px;
+  }
+  @media print {
+
+  
+  }
+  
+  :root {
+    --bg-color: #f4f3ff;
+    --btn-color: #646cff;
+    --dark-color: #242424;
+    --helper-color: #99b9ff;
+  }
+  
+  /* dark blue 
+  sky blue */
+
+  html {
+    font-size: 62.5%;
+  }
+  
+  /*? base style */
+  
+  body {
+    margin: 0;
+    /* display: flex;
+    place-items: center; */
+    /* min-width: 32rem; */
+    min-height: 100vh;
+  }
+  
+  h1 {
+    font-size: 5.4rem;
+    line-height: 1.1;
+    font-weight: bold;
+  }
+  
+  p,
+  li,
+  label,
+  input,
+  textarea {
+    font-size: 1.8rem;
+    line-height: 1.56;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.06rem;
+  }
+  
+  a {
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+    color: var(--btn-color);
+    text-decoration: inherit;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  /*? layout Rule  */
+  
+  .container {
+    max-width: 140rem;
+    padding: 4rem 2.4rem;
+    margin: 0 auto;
+  }
+  
+  .grid {
+    display: grid;
+    gap: 6.4rem;
+  }
+
+  .login
+  {
+    text-align: center;
+    margin-top: 100px;
+    border: solid 2px darkblue;
+    width: 50%;
+    align-items: center;
+    margin-left: 350px;
+  }
+  .login h2
+  {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  .login label
+  {
+    padding: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .login input
+  {
+    margin: 10px;
+  }
+  .login button
+  {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+
+  /*? Module Rules / Reusable */
+  button {
+    text-transform: capitalize;
+    padding: 1rem 2.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: var(--btn-color);
+    border-radius: 0.8rem;
+    -webkit-border-radius: 0.8rem;
+    -moz-border-radius: 0.8rem;
+    -ms-border-radius: 0.8rem;
+    -o-border-radius: 0.8rem;
+    border: 0.1rem solid transparent;
+    cursor: pointer;
+    letter-spacing: 0.1rem;
+    transition: border-color 0.3s;
+    -webkit-transition: border-color 0.3s;
+    -moz-transition: border-color 0.3s;
+    -ms-transition: border-color 0.3s;
+    -o-transition: border-color 0.3s;
+  }
+
+
+/* Reg form CSS */
+
+.section-product-form {
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    height: 100vh;           /* Full viewport height to ensure vertical centering */
+  }
+  
+  .section-product-form .product-form {
+    width: 100%;
+    max-width: 500px;        /* Set a max-width to the form */
+  }
+  
+  .section-product-form .product-form form {
+    margin: 0 auto;          /* Center the form horizontally */
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+  
+  .section-product-form .product-form label {
+    display: block;
+    margin-bottom: 1.2rem;
+    text-transform: capitalize;
+  }
+  
+  .section-product-form .product-form input,
+  .section-product-form .product-form textarea {
+    width: 100%;             /* Make input fields full width within the form */
+    padding: 0.4rem 0.6rem;
+  }
+  
+
+
+  /* CSS for invoice */
+
+/* Basic styling for the invoice container */
+
+/* Header styling */
+/* Container for the entire invoice */
+.invoice-container {
+  width: 95%; /* Adjust the width of the invoice */
+  margin: 20px auto; /* Center the invoice horizontally with margin */
+  padding: 20px; /* Add padding inside the container */
+  border: 2px solid #000; /* Add a solid border around the invoice */
+  border-radius: 8px; /* Add rounded corners to the border */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  background-color: var(--dark-color); /* Light background color */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center all content horizontally */
+  color: white;
+  font-size: 15px;
+  display: block;
+}
+
+.invoice-container
+.invoice-header h1{
+  font-size: 40px;
+}
+
+/* Styling for the invoice details section */
+.invoice-details {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  margin-top: 20px; /* Add space at the top */
+}
+
+/* Styling for the input fields */
+.invoice-details label,
+.invoice-details input {
+  margin-bottom: 10px; /* Add space between labels and inputs */
+  font-size: 14px; /* Adjust font size */
+}
+
+/* Reduce input fields width and spacing */
+.invoice-details input {
+  width: 300px; /* Set input width */
+  padding: 8px; /* Add padding inside input fields */
+  text-align: center; /* Center text inside input fields */
+}
+
+/* Center the button, total amount, and payment method */
+.centered-section {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  margin-top: 20px; /* Add some space at the top */
+}
+
+/* Styling for the product items */
+.product-item {
+  font-size: 14px; /* Reduce the text size for product items */
+}
+
+.product-details h2{
+  font-size: 18px;
+  margin: 3.5px;
+  text-decoration: underline;
+}
+
+/* Center the button, total amount, and payment method */
+.centered-section {
+  display: flex;
+  justify-content: center; /* Centers the button horizontally */
+  margin-top: 20px; /* Adds space above the button */
+}
+
+.centered-section h3 {
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+/* Styling for the total amount and payment method inputs */
+.centered-section input,
+.centered-section select {
+  width: 200px; /* Set width for input and select elements */
+  padding: 8px;
+  margin-top: 10px; /* Add some space between elements */
+  font-size: 14px;
+  text-align: center; /* Center text inside input/select */
+}
+
+.centered-section button {
+  margin-top: 20px; /* Add some space above the button */
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #007bff; /* Adjust button background color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+/* Reduce input fields width and spacing */
+.invoice-details input,
+.product-item input {
+  width: 150px;
+  padding: 6px;
+  margin-right: 10px; /* Reduce margin between input fields */
+  font-size: 14px;
+}
+
+
+
+/* Button styling */
+.no-print {
+  text-align: center;
+  margin-top: 15px; /* Reduced margin */
+}
+
+.no-print button {
+  font-size: 13px;
+  padding: 8px 16px; /* Adjusted padding */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.no-print button:hover {
+  background-color: #0056b3;
+}
+
+@media print {
+  /* White background for print */
+  body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Hide unnecessary elements for print */
+  .no-print, button, .salesperson-name {
+    display: none !important;
+  }
+
+  /* General styles for the entire invoice */
+  .invoice-container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+
+  /* Centered Invoice Header with 18px size */
+  .invoice-header {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  /* Invoice details aligned to the left side in a smaller size */
+  .invoice-details {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    font-size: 12px;
+  }
+
+  .invoice-details label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .invoice-details input {
+    width: auto;
+    border: none;  /* Remove input borders */
+    text-align: left;
+    font-size: 12px;
+  }
+
+  /* Centered Product Details */
+  .product-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    margin-top: 150px; /* Adjust to control vertical positioning */
+  }
+
+  .product-item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  .product-item label {
+    width: 100px;
+    text-align: left;
+  }
+
+  .product-item input {
+    width: 60px;
+    text-align: right;
+    border: none;  /* Remove input borders */
+  }
+
+  /* Total Amount on the right side after product details */
+  .total-amount {
+    position: absolute;
+    bottom: 50px;
+    right: 10px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .total-amount label {
+    display: block;
+  }
+
+  .total-amount input {
+    border: none;  /* Remove input borders */
+    font-size: 14px;
+    text-align: right;
+  }
+
+  /* Payment Method on the right side below Total Amount */
+  .payment-method {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .payment-method select {
+    border: none;  /* Remove input borders */
+    font-size: 14px;
+    text-align: right;
+  }
+
+
+.centered-section h3 {
+  display: none
+}
+}
+
+/* styles.css */
+@media print {
+  img.qr-code {
+    display: block;
+    width: auto; /* Adjust width if necessary */
+    height: auto;
+    page-break-inside: avoid; /* Prevent page breaks inside images */
+  }
+
+  .no-print {
+    display: none; /* Hide elements not needed in print */
+  }
+
+  .bar-header{
+    display: none;
+  }
+  .generator{
+    display: none;
+  }
+
+}
+.generator{
+  margin-right: 10px;
+  align-items: center;
+}
+
+.bar-header{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Logic CSS */
+
